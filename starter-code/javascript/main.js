@@ -51,7 +51,23 @@ function setResetBtn() {
 
 // Start/Stop Button
 btnLeft.addEventListener('click', function () {
+    //when not running
+    if(btnLeft.classList.contains('btn start')) {
+        console.log("works")
+        //left button
+        btnLeft.innerText = "STOP";
+        btnLeft.removeAttribute('class');
+        btnLeft.setAttribute('class', 'btn stop');
+        
+        //right button
+        btnRight.innerText = "SPLIT";
+        btnRight.removeAttribute('class');
+        btnRight.setAttribute('class', 'btn reset');
+    }
 
+    if(btnLeft.classList.contains('btn stop')) {
+        btnLeft.innerText;
+    }
 });
 
 // Reset/Split Button
