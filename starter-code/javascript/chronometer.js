@@ -16,7 +16,7 @@ class Chronometer {
       }
      return 0;
     }
-
+    //THIS IS MILLISECONDS
     getSeconds() {      
       return this.currentTime % 60;
     }
@@ -25,13 +25,15 @@ class Chronometer {
     
   return (value < 10) ? '0' + value.toString() : value.toString();
 
-    return (`${seconds.toString}`);
   }
   stopClick() {
-    this.intervalId = clearInterval();
+    clearInterval(this.intervalId);
   }
   resetClick() {
     this.currentTime = 0;
+    console.log(`Current time is now ${this.currentTime}`);
+    this.intervalId = 0;
+    console.log(`Interval ID is now ${this.intervalId}`);
   }
   // splitClick() {}
 }
